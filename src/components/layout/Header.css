@@ -1,0 +1,227 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #edf0f7;
+  background: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+/* .header-inner {
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+} */
+
+.header-inner {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 16px 24px;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.header-logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #22c55e);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.header-logo-text {
+  display: inline-flex;
+  width: 208.57px;
+  height: 64px;
+}
+
+.header-nav {
+  /* flex: 1; */
+  justify-self: center;
+  margin-right: 20px;
+}
+
+.header-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-link {
+  display: inline-flex;
+  /* important */
+  align-items: center;
+  /* vertical center */
+  color: #222;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #222222;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.header-nav-icon svg {
+  display: flex;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  stroke: #111827;
+  /* dark color */
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.header-primary-btn {
+  width: 215px;
+  height: 52px;
+  border-radius: 10px;
+  padding: 12px 24px;
+  gap: 10px;
+  font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.header-secondary-btn {
+  width: 130px;
+  height: 52px;
+  border-radius: 10px;
+  padding: 12px 20px;
+  gap: 10px;
+  font-family: "Exo 2", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.header-secondary-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header-menu-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.header-menu-toggle span {
+  width: 18px;
+  height: 2px;
+  border-radius: 999px;
+  background: #0f172a;
+  transition: transform 0.18s ease, opacity 0.18s ease;
+}
+
+.header-menu-toggle.is-open span:nth-child(1) {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.header-menu-toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.header-menu-toggle.is-open span:nth-child(3) {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .header-inner {
+    padding-inline: 16px;
+  }
+
+  .header-nav {
+    position: absolute;
+    inset-inline: 16px;
+    top: 72px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.22);
+    padding: 16px 18px 18px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+  }
+
+  .header-nav.is-open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .header-nav-list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .header-menu-toggle {
+    display: inline-flex;
+  }
+}
