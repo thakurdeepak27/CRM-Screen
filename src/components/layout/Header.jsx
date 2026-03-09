@@ -7,19 +7,22 @@ import { ChevronDown, LogIn } from "lucide-react";
 // Reusable, configurable header matching the LeadCRM Figma nav
 export const Header = ({
   navLinks = [
-    { label: "Product", href: "#product", icon: <ChevronDown  size={18}
-      strokeWidth={4}
-      color="#000000"
-     /> },
-    { label: "Pricing", href: "#pricing", },
-    { label: "Resources", href: "#resources",  icon: <ChevronDown size={18}
-    strokeWidth={4}
-    color="#000000"
-   /> },
-    { label: "Company", href: "#company", icon: <ChevronDown size={18}
-      strokeWidth={4}
-      color="#000000"
-     /> },
+    {
+      label: "Product",
+      href: "#product",
+      icon: <ChevronDown size={18} strokeWidth={4} color="#000000" />,
+    },
+    { label: "Pricing", href: "#pricing" },
+    {
+      label: "Resources",
+      href: "#resources",
+      icon: <ChevronDown size={18} strokeWidth={4} color="#000000" />,
+    },
+    {
+      label: "Company",
+      href: "#company",
+      icon: <ChevronDown size={18} strokeWidth={4} color="#000000" />,
+    },
   ],
   primaryAction = {
     label: "Get Your Free Account",
@@ -27,7 +30,7 @@ export const Header = ({
   },
   secondaryAction = {
     label: "Login",
-    icon: <LogIn  size={16} />,
+    icon: <LogIn size={16} />,
     href: "#login",
   },
 }) => {
@@ -41,7 +44,9 @@ export const Header = ({
         <div className="header-left">
           <a href="#top" className="header-logo">
             {/* <span className="header-logo-mark" /> */}
-            <span className="header-logo-text"><Logo /></span>
+            <span className="header-logo-text">
+              <Logo className="nav-logo" />
+            </span>
           </a>
         </div>
 
@@ -49,22 +54,19 @@ export const Header = ({
           <ul className="header-nav-list">
             {navLinks.map((item) => (
               <li key={item.label} className="header-nav-item">
-              <button
-  type="button"
-  className="header-nav-link"
->
-  <span>{item.label}</span>
-  {item.icon && (
-    <span className="header-nav-icon">{item.icon}</span>
-  )}
-</button>
+                <button type="button" className="header-nav-link">
+                  <span>{item.label}</span>
+                  {item.icon && (
+                    <span className="header-nav-icon">{item.icon}</span>
+                  )}
+                </button>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="header-actions">
-        {primaryAction && (
+          {primaryAction && (
             <Button
               variant="primary"
               size="small"
@@ -87,8 +89,6 @@ export const Header = ({
               <span>{secondaryAction.label}</span>
             </Button>
           )}
-
-         
         </div>
 
         <button

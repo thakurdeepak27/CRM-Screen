@@ -1,0 +1,308 @@
+.challenges-container {
+  padding: 20px 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.without-card {
+  background-color: #fff7f8;
+  color: #d24b68;
+}
+
+.challenges-title {
+  font-size: 36px;
+  color: #090f4e;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.comparison-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: relative;
+  gap: 40px;
+}
+
+.challenge-card {
+  flex: 1;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.with-card {
+  background-color: #ffffff;
+  box-shadow: 0px 8px 24px 0px rgba(149, 157, 165, 0.2);
+  color: #097737;
+}
+
+.bullet-icon-image {
+  width: 42px;
+  height: 42px;
+}
+
+/* .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+} */
+
+.card-logo,
+.card-logo-image {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .card-header-text {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #9ca3af;
+} */
+
+.image-placeholder {
+  width: 100%;
+  /* height: 200px; */
+  background: #f7fafc;
+  border-radius: 18px;
+  margin-bottom: 0px;
+  /* Add background image styles here */
+}
+
+.card-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* .red-text {
+    color: #e53e3e;
+} */
+
+/* .green-text {
+    color: #38a169;
+} */
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.item-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.item-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 24.7px;
+  color: #ff4c51;
+  padding: 6px 6.23px;
+  background-color: #ffdcd4;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+
+.list-item strong {
+  display: block;
+  font-size: 20px;
+  color: #262626;
+  font-weight: 600;
+}
+
+.list-item p {
+  font-size: 16px;
+  color: #4c4c4c;
+  margin: 4px 0 0 0;
+  line-height: 24px;
+}
+
+.icon-cross {
+  font-size: 24px;
+  color: #d24b68;
+  font-weight: bold;
+}
+
+.icon-check {
+  color: #38a169;
+  font-weight: bold;
+}
+
+.vs-divider {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: 500;
+  color: #090f4e;
+  z-index: 2;
+  /* must be higher than line */
+}
+
+.comparison-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background-color: #e2e8f0;
+  z-index: 1;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 0px 60px 201px;
+  background-color: transparent;
+  /* Or match your page shell color */
+}
+
+.cta-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+/* The Green Button */
+.cta-button {
+  background-color: #b3fc6a;
+  /* Light green from image */
+  color: #000000;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0px 8px 24px 0px #959da533;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #a2e859;
+  transform: translateY(-3px);
+}
+
+/* Decorative Section */
+.cta-decorative {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Positioning the Curved Arrow */
+.cta-arrow-icon {
+  position: relative;
+  top: 25px;
+  right: 33px;
+  font-size: 40px;
+  color: #2d5a43;
+  /* Dark green for the arrow */
+  margin-right: 15px;
+  width: 80px;
+  /* adjust as needed */
+  height: auto;
+  margin-right: 8px;
+  /* Ideally, replace this with your actual exported SVG arrow */
+}
+
+/* "Save 40+ hours every Month" Typography */
+.cta-promo-text {
+  /* font-family: 'Dancing Script', cursive; */
+  /* Or similar handwriting font */
+  font-family: Caveat;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  gap: 0px;
+  line-height: 35px;
+  position: relative;
+  right: 60px;
+  bottom: 25px;
+  font-size: 30px;
+  color: #1d4841;
+
+  font-weight: 700;
+}
+
+.cta-promo-text span {
+  display: block;
+}
+
+.card-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.saved-time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6fff1;
+  border-radius: 24.7px;
+  padding: 8px 8.23px;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #097737;
+}
+
+/* Responsive Handling */
+@media (max-width: 768px) {
+  .cta-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .cta-arrow-icon {
+    display: none;
+    /* Hide decorative elements on mobile for space */
+  }
+}
+
+@media (max-width: 900px) {
+  .comparison-wrapper {
+    flex-direction: column;
+  }
+
+  .vs-divider {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+  }
+}
