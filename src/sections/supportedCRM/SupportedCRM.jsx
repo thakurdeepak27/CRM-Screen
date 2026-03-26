@@ -1,9 +1,8 @@
-import "./supportedcrm.css";
+import "./Supportedcrm.css";
 
 import bannerThumb from "../../assets/images/banner-thumb.png";
 import collabrationImg from "../../assets/images/collaboration.png";
 import crmIcon from "../../assets/images/crm-image.png";
-import chromeImage from "../../assets/images/chrome-logo.png";
 import salesforce from "../../assets/images/salesforce.png";
 import pipedrive from "../../assets/images/pipedrive.png";
 import hubspot from "../../assets/images/hubspot.png";
