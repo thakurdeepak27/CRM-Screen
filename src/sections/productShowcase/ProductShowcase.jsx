@@ -90,23 +90,30 @@ export const ProductShowcase = () => {
             </span>
 
             <div className="card-images-row">
-              <span className="verified-badge">
-                <span className="check-icon">
+              <div className="card-left">
+                <div className="check-icon">
                   <img
                     src={mailLockIcon}
                     alt="Mail Icon"
                     className="check-mail-icon"
                   />
                   <h2>Verified Email & Phone</h2>
-                </span>
+                </div>
 
-                <img src={cardImg1} alt="Feature Image 1" />
-              </span>
-              <img
-                src={cardImg2}
-                alt="Feature Image 2"
-                className="card-image2"
-              />
+                <img
+                  src={cardImg1}
+                  alt="Feature Image 1"
+                  className="card-image1"
+                />
+              </div>
+
+              <div className="card-right">
+                <img
+                  src={cardImg2}
+                  alt="Feature Image 2"
+                  className="card-image2"
+                />
+              </div>
             </div>
           </div>
 

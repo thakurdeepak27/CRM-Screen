@@ -12,9 +12,7 @@ export const StepCard = ({
     <div className={`step-card ${className}`}>
       {number && <span className="step-number">{number}</span>}
       {title && <h3 className="step-title">{title}</h3>}
-      {description && (
-        <p className="step-description">{description}</p>
-      )}
+      {description && <p className="step-description">{description}</p>}
       {image && (
         <div className="step-image">
           <img src={image} alt={title} />

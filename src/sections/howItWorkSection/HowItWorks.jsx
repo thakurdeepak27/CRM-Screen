@@ -7,6 +7,7 @@ import HowItWork2 from "../../assets/images/how-work-2.png";
 import HowItWork3 from "../../assets/images/how-work-3.png";
 import HowItWork4 from "../../assets/images/how-work-4.png";
 import HowItWorkLight from "../../assets/images/how-work-light.png";
+import { ArrowRight } from "lucide-react";
 
 export const HowItWorks = () => {
   const steps = [
@@ -43,31 +44,33 @@ export const HowItWorks = () => {
   return (
     <section className="how-container">
       <div className="how-main">
-    <div className="how-inner">
-      <div className="how-header">
-        <h2>How it Works</h2>
-        <p>From setup to success in 4 simple steps</p>
+        <div className="without-decoration">
+          <div className="container">
+            <div className="how-inner">
+              <div className="how-header">
+                <h2>How it Works</h2>
+                <p>From setup to success in 4 simple steps</p>
+              </div>
+
+              <div className="how-steps">
+                {steps.map((step, index) => (
+                  <StepCard key={index} {...step} className="how-step-card" />
+                ))}
+              </div>
+
+              <div className="how-cta">
+                <button className="how-btn">
+                  Try LeadCRM Now
+                  <ArrowRight size={24} />
+                </button>
+              </div>
+            </div>
+            <div className="how-decoration">
+              <img src={HowItWorkLight} alt="light images" />
+            </div>
+          </div>
+        </div>
       </div>
-  
-      <div className="how-steps">
-        {steps.map((step, index) => (
-          <StepCard key={index} {...step} className="how-step-card" />
-        ))}
-      </div>
-  
-      <div className="how-cta">
-        <button className="how-btn">
-          Try LeadCRM Now →
-        </button>
-      </div>
-    </div>
-    </div>
-  
-    {/* Decorative Background */}
-    <div className="how-decoration">
-<img src={HowItWorkLight} alt="light images" />
-    </div>
-    
-  </section>
+    </section>
   );
 };

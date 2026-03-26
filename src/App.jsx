@@ -2,7 +2,11 @@
 import { LandingPage } from "./pages";
 
 function App() {
-  return <LandingPage />;
+  return (
+    <div className="app">
+      <LandingPage />
+    </div>
+  );
 }
 
 export default App;

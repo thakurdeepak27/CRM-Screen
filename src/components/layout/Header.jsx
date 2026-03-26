@@ -86,7 +86,9 @@ export const Header = ({
                   {secondaryAction.icon}
                 </span>
               )}
-              <span>{secondaryAction.label}</span>
+              <span className="header-secondary-label">
+                {secondaryAction.label}
+              </span>
             </Button>
           )}
         </div>

@@ -13,7 +13,7 @@
 }
 
 .header-inner {
-  width: min(95%, 1440px);
+  width: min(95%, 1920px);
   margin: 0 auto;
   padding: 16px 24px;
 
@@ -136,6 +136,8 @@ ol {
 }
 
 .header-secondary-btn {
+  display: flex;
+  align-items: normal;
   width: 130px;
   height: 52px;
   border-radius: 10px;
@@ -159,6 +161,9 @@ ol {
   height: 24px;
 }
 
+.header-secondary-label {
+  margin-bottom: 30px;
+}
 .header-menu-toggle {
   display: none;
   width: 40px;
@@ -196,7 +201,16 @@ ol {
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
+  .header-nav {
+    margin-right: 10px;
+  }
+  .header-nav-list {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 1024px) {
   .header-inner {
     grid-template-columns: auto auto;
     justify-content: space-between;

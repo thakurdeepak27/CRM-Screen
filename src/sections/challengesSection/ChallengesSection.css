@@ -1,6 +1,5 @@
 .challenges-container {
-  padding: 20px 20px;
-  max-width: 80%;
+  padding: 20px 0px;
   margin: 0 auto;
   text-align: center;
 }
@@ -19,9 +18,10 @@
 
 .comparison-wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   justify-content: space-between;
   position: relative;
+  padding: 0 20px;
   gap: 40px;
 }
 
@@ -32,6 +32,11 @@
   padding: 30px;
   text-align: left;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 
 .with-card {
@@ -45,13 +50,6 @@
   height: 42px;
 }
 
-/* .card-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 18px;
-} */
-
 .card-logo,
 .card-logo-image {
   display: inline-flex;
@@ -59,21 +57,11 @@
   justify-content: center;
 }
 
-/* .card-header-text {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: #9ca3af;
-} */
-
 .image-placeholder {
   width: 100%;
-  /* height: 200px; */
   background: #f7fafc;
   border-radius: 18px;
   margin-bottom: 0px;
-  /* Add background image styles here */
 }
 
 .card-subtitle {
@@ -86,17 +74,10 @@
   margin-top: 15px;
 }
 
-/* .red-text {
-    color: #e53e3e;
-} */
-
-/* .green-text {
-    color: #38a169;
-} */
-
 .benefits-list {
   list-style: none;
   padding: 0;
+  flex: 1;
 }
 
 .item-header {
@@ -162,14 +143,14 @@
   font-weight: 500;
   color: #090f4e;
   z-index: 2;
-  /* must be higher than line */
+  pointer-events: none;
 }
 
 .comparison-wrapper::before {
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 0px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   width: 1px;
@@ -181,9 +162,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 35px 0px 60px 201px;
+  padding: 35px 0px;
   background-color: transparent;
-  /* Or match your page shell color */
 }
 
 .cta-wrapper {
@@ -193,10 +173,9 @@
   position: relative;
 }
 
-/* The Green Button */
 .cta-button {
+  height: 60px;
   background-color: #b3fc6a;
-  /* Light green from image */
   color: #000000;
   font-family: "Exo 2", sans-serif;
   font-weight: 600;
@@ -206,7 +185,6 @@
   border-radius: 12px;
   cursor: pointer;
   box-shadow: 0px 8px 24px 0px #959da533;
-
   transition:
     transform 0.2s ease,
     background-color 0.2s ease;
@@ -217,11 +195,10 @@
   transform: translateY(-3px);
 }
 
-/* Decorative Section */
 .cta-decorative {
   display: flex;
   align-items: center;
-  position: relative;
+  gap: 10px;
 }
 
 /* Positioning the Curved Arrow */
@@ -231,23 +208,16 @@
   right: 33px;
   font-size: 40px;
   color: #2d5a43;
-  /* Dark green for the arrow */
   margin-right: 15px;
   width: 80px;
-  /* adjust as needed */
   height: auto;
   margin-right: 8px;
-  /* Ideally, replace this with your actual exported SVG arrow */
 }
 
-/* "Save 40+ hours every Month" Typography */
 .cta-promo-text {
-  /* font-family: 'Dancing Script', cursive; */
-  /* Or similar handwriting font */
   font-family: Caveat;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
   align-items: flex-start;
   gap: 0px;
   line-height: 35px;
@@ -256,7 +226,6 @@
   bottom: 25px;
   font-size: 30px;
   color: #1d4841;
-
   font-weight: 700;
 }
 
@@ -283,26 +252,91 @@
 }
 
 /* Responsive Handling */
+@media (max-width: 1200px) {
+  .comparison-wrapper::before {
+    top: 10px;
+    bottom: 10px;
+  }
+}
+
 @media (max-width: 768px) {
-  .cta-wrapper {
+  .comparison-wrapper {
     flex-direction: column;
+    gap: 80px;
+  }
+
+  .comparison-wrapper::before {
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .vs-divider {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cta-wrapper {
     gap: 20px;
   }
 
   .cta-arrow-icon {
-    display: none;
-    /* Hide decorative elements on mobile for space */
+    top: 30px;
+    right: 10px;
+  }
+
+  .cta-promo-text {
+    font-size: 24px;
+    right: 45px;
+    bottom: 40px;
   }
 }
 
-@media (max-width: 900px) {
-  .comparison-wrapper {
-    flex-direction: column;
+@media (max-width: 468px) {
+  .cta-button {
+    max-width: 40%;
+    height: auto;
   }
 
-  .vs-divider {
-    position: static;
-    transform: none;
-    margin: 20px auto;
+  .cta-wrapper {
+    gap: 0px;
+  }
+
+  .cta-container {
+    padding-left: 25px;
+  }
+
+  .cta-arrow-icon {
+    top: 31px;
+    right: -4px;
+  }
+
+  .cta-promo-text {
+    font-size: 24px;
+    right: 25px;
+  }
+
+  .card-subtitle {
+    flex-wrap: wrap;
+  }
+
+  .saved-time {
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .item-header {
+    flex-wrap: wrap;
+  }
+
+  .item-subtitle {
+    max-width: 100%;
+    white-space: normal;
+    word-break: break-word;
   }
 }
