@@ -1,4 +1,4 @@
-import "./Supportedcrm.css";
+import "./SupportedCRM.css";
 
 import bannerThumb from "../../assets/images/banner-thumb.png";
 import collabrationImg from "../../assets/images/collaboration.png";
@@ -15,7 +15,6 @@ import vector1 from "../../assets/images/vector-1.png";
 import vector2 from "../../assets/images/vector-2.png";
 import vector3 from "../../assets/images/vector-3.png";
 import vector4 from "../../assets/images/vector-4.png";
-// import chatIcon from "../../components/icons/ChatIcon";
 
 export const SupportedCRM = () => {
   return (

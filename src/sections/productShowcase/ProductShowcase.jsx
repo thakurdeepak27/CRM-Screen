@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Productshowcase.css";
+import "./ProductShowcase.css";
 
 import robotImage from "../../assets/images/robot-image.png";
 import dropContactIcon from "../../assets/images/drop-contact-icon.png";
